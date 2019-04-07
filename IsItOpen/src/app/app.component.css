@@ -1,0 +1,13 @@
+
+.buttonSpace {
+    margin-right: 10px;
+}
+
+.buttonPosition {
+    position:fixed;
+    bottom:20px;
+}
+
+.buttonWidth {
+    min-width: 150px;
+}
