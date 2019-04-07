@@ -11,3 +11,7 @@
 .buttonWidth {
     min-width: 150px;
 }
+
+.whiteHeader {
+    color:white;
+}

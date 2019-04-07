@@ -1,13 +1,23 @@
 <div>
-  <div style="text-align:center;">
-    <h1 style="color:white;">
+  <div style="text-align:center;margin-top:200px;">
+    <h1 class="whiteHeader">
       {{title}}
     </h1>
   </div>
 
-  <div class="col text-center buttonPosition">
-      <button type="button" class="btn btn-primary btn-lg buttonSpace buttonWidth allign-baseline" (click)="vote(true)">Open</button>
+  <div style="text-align:center;margin-top:130px;">
+      <h3 class="whiteHeader">
+        Results
+      </h3>
+      <h4 class="whiteHeader">{{openCount}} say open, {{closedCount}} say closed</h4>
+    </div>
+
+  <div class="col text-center buttonPosition" *ngIf="!alreadyVoted">
+      <button type="button" class="btn btn-primary btn-lg buttonWidth allign-baseline" (click)="vote(true)">Open</button>
       <button type="button" class="btn btn-secondary btn-lg buttonWidth allign-baseline" (click)="vote(false)">Closed</button>
+  </div>
+  <div class="col text-center buttonPosition" *ngIf="alreadyVoted">
+      <h1 class="whiteHeader">Thanks for voting!</h1>
   </div>
 </div>
 
